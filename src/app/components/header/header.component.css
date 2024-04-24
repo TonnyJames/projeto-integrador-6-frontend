@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+img {
+    margin-top: 1rem;
+    border: 2px solid grey;
+    padding: 2% 10%;
+    border-radius: 2rem;
+    width: 35%;
+    text-align: center;
+    background: linear-gradient(174deg, rgba(43,34,35,1) 42%, rgba(173,23,40,1) 100%);
+}
+

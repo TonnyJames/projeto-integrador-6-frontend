@@ -1,0 +1,79 @@
+.container {
+    background: black;
+}
+
+
+.box-image {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+img {
+    width     : 80%;
+    margin-top: 20%;
+}
+
+.sidenav {
+    width           : 13rem;
+    /* background   : linear-gradient(174deg, rgba(43,34,35,1) 42%, rgba(173,23,40,1) 100%); */
+    background-color: black;
+}
+
+.nav-list {
+    margin-top: 5%;
+}
+
+.sidenav a {
+    color: white;
+}
+
+.sidenav i {
+    margin-right: .6rem;
+}
+
+* {
+    margin    : 0;
+    padding   : 0;
+    border    : none;
+    box-sizing: border-box;
+    outline   : none;
+}
+
+
+
+.sidenav-content {
+    justify-content: baseline;
+    text-align     : left;
+    background     : black;
+}
+
+.btnOpenClose {
+    background-color: transparent;
+    color           : white;
+    margin          : 0;
+    padding         : 0;
+}
+
+#open {}
+
+.nmUsuario {
+    text-align: right;
+    color     : white
+}
+
+.inputNome {
+    width           : fit-content !important;
+    align-items     : baseline;
+    margin-right    : 2% !important;
+    color           : white !important;
+    background-color: black;
+    border-style    : none;
+}
+
+.btnOpenClose:hover {
+    /* opacity: 0.2; */
+    cursor    : pointer;
+    transform : scale(1.1);
+    transition: all 0.5s;
+}
