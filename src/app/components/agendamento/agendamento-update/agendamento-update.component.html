@@ -70,7 +70,7 @@
       </div> -->
   <div class="cliente">
     <mat-form-field class="full-width" appearance="outline">
-      <mat-label>Cliente ({{agendamento.nomeCliente}})</mat-label>
+      <mat-label>Paciente ({{agendamento.nomeCliente}})</mat-label>
       <mat-select [disabled]="true" required [(ngModel)]="agendamento.cliente" name="cliente">
         <mat-option *ngFor="let cli of clientes" value="{{ cli.id }}">{{cli.nome}}</mat-option>
       </mat-select>

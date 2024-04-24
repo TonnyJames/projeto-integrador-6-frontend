@@ -1,5 +1,5 @@
-import { Cliente } from 'src/app/models/cliente';
-import { ClienteService } from 'src/app/services/cliente.service';
+import { Paciente } from 'src/app/models/paciente';
+import { PacienteService } from 'src/app/services/paciente.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
@@ -25,7 +25,7 @@ export class AgendamentoListComponent implements OnInit {
 
   constructor(
     private agendamentoService: AgendamentoService,
-    private clienteService: ClienteService
+    private clienteService: PacienteService
   ) { }
 
   ngOnInit(): void {

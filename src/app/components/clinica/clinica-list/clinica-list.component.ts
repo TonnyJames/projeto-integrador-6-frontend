@@ -1,24 +1,24 @@
-import { Servico } from './../../../models/servico';
-import { ServicoService } from './../../../services/servico.service';
+import { Clinica } from '../../../models/clinica';
+import { ClinicaService } from '../../../services/clinica.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-servico-list',
-  templateUrl: './servico-list.component.html',
-  styleUrls: ['./servico-list.component.css']
+  selector: 'app-clinica-list',
+  templateUrl: './clinica-list.component.html',
+  styleUrls: ['./clinica-list.component.css']
 })
-export class ServicoListComponent implements OnInit {
-  ELEMENT_DATA: Servico[] = []
+export class ClinicaListComponent implements OnInit {
+  ELEMENT_DATA: Clinica[] = []
 
   displayedColumns: string[] = ['nmNegocio','categoria', 'acoes'];
-  dataSource = new MatTableDataSource<Servico>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource<Clinica>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
-    private service: ServicoService
+    private clinicaService: ClinicaService
   ) { }
 
   ngOnInit(): void {
@@ -26,9 +26,9 @@ export class ServicoListComponent implements OnInit {
   }
 
   findAll(){
-    this.service.findAll().subscribe(resposta => {
+    this.clinicaService.findAll().subscribe(resposta => {
       this.ELEMENT_DATA = resposta
-      this.dataSource = new MatTableDataSource<Servico>(resposta);
+      this.dataSource = new MatTableDataSource<Clinica>(resposta);
       this.dataSource.paginator = this.paginator;
     })
   }

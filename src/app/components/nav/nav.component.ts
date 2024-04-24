@@ -1,5 +1,5 @@
-import { ClienteService } from './../../services/cliente.service';
-import { Cliente } from './../../models/cliente';
+import { PacienteService } from '../../services/paciente.service';
+import { Paciente } from '../../models/paciente';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
@@ -12,12 +12,12 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class NavComponent implements OnInit {
 
-  usuarioLogado: Cliente
+  usuarioLogado: Paciente
   nmUsuario: string = ''
 
   constructor(private router: Router,
     private authService: AuthService,
-    private clienteService: ClienteService,
+    private clienteService: PacienteService,
     private toast: ToastrService) { }
 
   ngOnInit(): void {

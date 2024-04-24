@@ -1,16 +1,16 @@
-import { ServicoService } from './../../../services/servico.service';
+import { ClinicaService } from '../../../services/clinica.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import * as moment from 'moment';
 import { ToastrService } from 'ngx-toastr';
 import { Agendamento } from 'src/app/models/agendamento';
-import { Cliente } from 'src/app/models/cliente';
+import { Paciente } from 'src/app/models/paciente';
 import { Colaborador } from 'src/app/models/colaborador';
 import { AgendamentoService } from 'src/app/services/agendamento.service';
-import { ClienteService } from 'src/app/services/cliente.service';
+import { PacienteService } from 'src/app/services/paciente.service';
 import { ColaboradorService } from 'src/app/services/colaborador.service';
-import { Servico } from 'src/app/models/servico';
+import { Clinica } from 'src/app/models/clinica';
 
 @Component({
   selector: 'app-agendamento-create',
@@ -22,8 +22,8 @@ export class AgendamentoCreateComponent implements OnInit {
 
   idServico:      String = ''
   idCliente:      String = ''
-  cliente:        Cliente
-  servico:        Servico
+  cliente:        Paciente
+  servico:        Clinica
   agendamento:    Agendamento = {
     dataAgendada:'',
     horaAgendada:'',
@@ -46,15 +46,15 @@ export class AgendamentoCreateComponent implements OnInit {
   titulo:      FormControl = new FormControl(null, [Validators.required])
   // observacoes: FormControl = new FormControl(null, [Validators.required])
   // colaborador: FormControl = new FormControl(null, [Validators.required])
-  // cliente:     FormControl = new FormControl(null, [Validators.required])
+  // paciente:     FormControl = new FormControl(null, [Validators.required])
   // servicos:     FormControl = new FormControl(null, [Validators.required])
 
 
   constructor(
     private agendamentoService: AgendamentoService,
-    private clienteService:     ClienteService,
+    private clienteService:     PacienteService,
     // private colaboradorService: ColaboradorService,
-    private servicoService:     ServicoService,
+    private servicoService:     ClinicaService,
     private toastService:       ToastrService,
     private router:             Router,
     private route:              ActivatedRoute

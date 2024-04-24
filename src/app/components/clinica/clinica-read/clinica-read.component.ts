@@ -1,17 +1,17 @@
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { ServicoService } from './../../../services/servico.service';
-import { Servico } from 'src/app/models/servico';
+import { ClinicaService } from '../../../services/clinica.service';
+import { Clinica } from 'src/app/models/clinica';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-servico-read',
-  templateUrl: './servico-read.component.html',
-  styleUrls: ['./servico-read.component.css']
+  selector: 'app-clinica-read',
+  templateUrl: './clinica-read.component.html',
+  styleUrls: ['./clinica-read.component.css']
 })
-export class ServicoReadComponent implements OnInit {
+export class ClinicaReadComponent implements OnInit {
 
-  servico: Servico = {
+  clinica: Clinica = {
 
     id: '',
     categoria: '',
@@ -25,19 +25,19 @@ export class ServicoReadComponent implements OnInit {
   }
 
   constructor(
-    private servicoService: ServicoService,
+    private clinicaService: ClinicaService,
     private toastService:   ToastrService,
     private route:          ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-    this.servico.id = this.route.snapshot.paramMap.get('id');
+    this.clinica.id = this.route.snapshot.paramMap.get('id');
     this.findById();
   }
 
   findById(): void{
-    this.servicoService.findById(this.servico.id).subscribe(resposta => {
-      this.servico = resposta;
+    this.clinicaService.findById(this.clinica.id).subscribe(resposta => {
+      this.clinica = resposta;
     }, ex => {
       this.toastService.error(ex.console.error.error);
     })

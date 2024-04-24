@@ -1,4 +1,4 @@
-export interface Cliente {
+export interface Paciente {
     id?: any;
     nome: string;
     cpf: string;

@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Cliente } from 'src/app/models/cliente';
-import { ClienteService } from 'src/app/services/cliente.service';
+import { Paciente } from 'src/app/models/paciente';
+import { PacienteService } from 'src/app/services/paciente.service';
 
 @Component({
-  selector: 'app-cliente-create',
-  templateUrl: './cliente-create.component.html',
-  styleUrls: ['./cliente-create.component.css']
+  selector: 'app-registrar-paciente',
+  templateUrl: './registrar-paciente.component.html',
+  styleUrls: ['./registrar-paciente.component.css']
 })
-export class ClienteCreateComponent implements OnInit {
+export class RegistrarPacienteComponent implements OnInit {
 
-  cliente: Cliente = {
+  paciente: Paciente = {
     id: '',
     nome: '',
     cpf: '',
@@ -30,7 +30,7 @@ export class ClienteCreateComponent implements OnInit {
   senha: FormControl = new FormControl(null, Validators.minLength(3));
 
   constructor(
-    private service: ClienteService,
+    private pacienteService: PacienteService,
     private toast: ToastrService,
     private router: Router) { }
 
@@ -42,9 +42,9 @@ export class ClienteCreateComponent implements OnInit {
   }
 
   create(): void {
-    this.service.create(this.cliente).subscribe(() => {
-      this.toast.success('Cliente cadastrado com sucesso', 'Cadastro');
-      this.router.navigate(['clientes'])
+    this.pacienteService.create(this.paciente).subscribe(() => {
+      this.toast.success('Você foi registrado com sucesso', 'Cadastro');
+      this.router.navigate(['/login'])
     }), ex => {
       if(ex.error.errors){
         ex.error.errors.fotEach(element =>{
@@ -57,14 +57,14 @@ export class ClienteCreateComponent implements OnInit {
   }
 
   addPerfil(perfil: any): void {
-    this.cliente.perfis.push(perfil);
+    this.paciente.perfis.push(perfil);
 
-    if (this.cliente.perfis.includes(perfil)) {
-      this.cliente.perfis.splice(this.cliente.perfis.indexOf(perfil), 1);
-      console.log(this.cliente.perfis);
+    if (this.paciente.perfis.includes(perfil)) {
+      this.paciente.perfis.splice(this.paciente.perfis.indexOf(perfil), 1);
+      console.log(this.paciente.perfis);
     } else {
-      this.cliente.perfis.push(perfil);
-      console.log(this.cliente.perfis);
+      this.paciente.perfis.push(perfil);
+      console.log(this.paciente.perfis);
     }
   }
 }

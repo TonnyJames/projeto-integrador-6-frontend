@@ -1,6 +1,6 @@
-import { API_CONFIG } from './../config/api.config';
+import { API_CONFIG } from '../config/api.config';
 import { Observable } from 'rxjs';
-import { Agendamento } from './../models/agendamento';
+import { Agendamento } from '../models/agendamento';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 

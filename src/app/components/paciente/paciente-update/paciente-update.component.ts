@@ -2,17 +2,17 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Cliente } from 'src/app/models/cliente';
-import { ClienteService } from 'src/app/services/cliente.service';
+import { Paciente } from 'src/app/models/paciente';
+import { PacienteService } from 'src/app/services/paciente.service';
 
 @Component({
-  selector: 'app-cliente-update',
-  templateUrl: './cliente-update.component.html',
-  styleUrls: ['./cliente-update.component.css']
+  selector: 'app-paciente-update',
+  templateUrl: './paciente-update.component.html',
+  styleUrls: ['./paciente-update.component.css']
 })
-export class ClienteUpdateComponent implements OnInit {
+export class PacienteUpdateComponent implements OnInit {
 
-  cliente: Cliente = {
+  cliente: Paciente = {
     id: '',
     nome: '',
     cpf: '',
@@ -30,7 +30,7 @@ export class ClienteUpdateComponent implements OnInit {
   senha: FormControl = new FormControl(null, Validators.minLength(3));
 
   constructor(
-    private service: ClienteService,
+    private service: PacienteService,
     private toast: ToastrService,
     private router: Router,
     private route: ActivatedRoute) { }
@@ -52,7 +52,7 @@ export class ClienteUpdateComponent implements OnInit {
 
   update(): void {
     this.service.update(this.cliente).subscribe(() => {
-      this.toast.success('Cliente atualizado com sucesso', 'Update');
+      this.toast.success('Paciente atualizado com sucesso', 'Update');
       this.router.navigate(['clientes'])
     }), ex => {
       if(ex.error.errors){

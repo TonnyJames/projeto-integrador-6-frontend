@@ -1,25 +1,25 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Cliente } from 'src/app/models/cliente';
-import { ClienteService } from 'src/app/services/cliente.service';
+import { Paciente } from 'src/app/models/paciente';
+import { PacienteService } from 'src/app/services/paciente.service';
 
 @Component({
-  selector: 'app-cliente-list',
-  templateUrl: './cliente-list.component.html',
-  styleUrls: ['./cliente-list.component.css']
+  selector: 'app-paciente-list',
+  templateUrl: './paciente-list.component.html',
+  styleUrls: ['./paciente-list.component.css']
 })
-export class ClienteListComponent implements OnInit {
+export class PacienteListComponent implements OnInit {
   
-  ELEMENT_DATA: Cliente[] = []
+  ELEMENT_DATA: Paciente[] = []
 
   displayedColumns: string[] = ['id', 'nome', 'cpf', 'email', 'acoes'];
-  dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource<Paciente>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(
-    private service: ClienteService
+    private service: PacienteService
   ) { }
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class ClienteListComponent implements OnInit {
   findAll(){
     this.service.findAll().subscribe(resposta => {
       this.ELEMENT_DATA = resposta
-      this.dataSource = new MatTableDataSource<Cliente>(resposta);
+      this.dataSource = new MatTableDataSource<Paciente>(resposta);
       this.dataSource.paginator = this.paginator;
     })
   }

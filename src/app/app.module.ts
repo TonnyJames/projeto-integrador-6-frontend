@@ -44,26 +44,26 @@ import { LoginComponent} from './components/login/login.component';
 import { ColaboradorCreateComponent } from './components/colaborador/colaborador-create/colaborador-create.component';
 import { ColaboradorUpdateComponent } from './components/colaborador/colaborador-update/colaborador-update.component';
 import { ColaboradorDeleteComponent } from './components/colaborador/colaborador-delete/colaborador-delete.component';
-import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
-import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
-import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
-import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { PacienteCreateComponent } from './components/paciente/paciente-create/paciente-create.component';
+import { PacienteDeleteComponent } from './components/paciente/paciente-delete/paciente-delete.component';
+import { PacienteListComponent } from './components/paciente/paciente-list/paciente-list.component';
+import { PacienteUpdateComponent } from './components/paciente/paciente-update/paciente-update.component';
 import { AgendamentoListComponent } from './components/agendamento/agendamento-list/agendamento-list.component';
 import { AgendamentoCreateComponent } from './components/agendamento/agendamento-create/agendamento-create.component';
 import { AgendamentoUpdateComponent } from './components/agendamento/agendamento-update/agendamento-update.component';
 import { AgendamentoReadComponent } from './components/agendamento/agendamento-read/agendamento-read.component';
-import { RegistrarClienteComponent } from './components/registar-button/registrar-cliente/registrar-cliente.component';
-import { ServicoCreateComponent} from './components/servico/servico-create/servico-create.component';
+import { RegistrarPacienteComponent } from './components/registar-button/registrar-paciente/registrar-paciente.component';
+import { ClinicaCreateComponent} from './components/clinica/clinica-create/clinica-create.component';
 import { RegisterDialogComponent } from './components/login/register-dialog/register-dialog.component';
 import { ConsultaComponent } from './components/api-relatorio/consulta/consulta.component';
 import { ConsultaListComponent } from './components/api-relatorio/consulta-list/consulta-list.component';
-import { ServicoListComponent } from './components/servico/servico-list/servico-list.component';
+import { ClinicaListComponent } from './components/clinica/clinica-list/clinica-list.component';
 
 
 
 //guardas de rotas
 import { AuthGuard } from './auth/auth.guard';
-import { ServicoReadComponent } from './components/servico/servico-read/servico-read.component';
+import { ClinicaReadComponent } from './components/clinica/clinica-read/clinica-read.component';
 
 
 @NgModule({
@@ -77,21 +77,21 @@ import { ServicoReadComponent } from './components/servico/servico-read/servico-
     ColaboradorCreateComponent,
     ColaboradorUpdateComponent,
     ColaboradorDeleteComponent,
-    ClienteCreateComponent,
-    ClienteDeleteComponent,
-    ClienteListComponent,
-    ClienteUpdateComponent,
+    PacienteCreateComponent,
+    PacienteDeleteComponent,
+    PacienteListComponent,
+    PacienteUpdateComponent,
     AgendamentoCreateComponent,
     AgendamentoListComponent,
     AgendamentoReadComponent,
     AgendamentoUpdateComponent,
-    RegistrarClienteComponent,
+    RegistrarPacienteComponent,
     RegisterDialogComponent,
-    ServicoCreateComponent,
+    ClinicaCreateComponent,
     ConsultaComponent,
     ConsultaListComponent,
-    ServicoListComponent,
-    ServicoReadComponent
+    ClinicaListComponent,
+    ClinicaReadComponent
   ],
   imports: [
     MatDialogModule,

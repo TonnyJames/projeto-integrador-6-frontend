@@ -1,4 +1,4 @@
-export interface Servico {
+export interface Clinica {
     id?: any;
     categoria: any;
     nmNegocio: string;
