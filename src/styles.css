@@ -10,3 +10,11 @@ body {
     margin     : 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+:root{
+--verde-1: #038C4C;
+--verde-2: #05A65B;
+--verde-3: #78BF9E;
+--verde-4: #BBD94E;
+--cinza-1: #F2F2F2
+}
