@@ -2,16 +2,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: var(--verde-2);
 }
 
-img {
-    margin-top: 1rem;
-    border: 2px solid grey;
-    padding: 2% 10%;
-    border-radius: 2rem;
-    width: 35%;
-    text-align: center;
-    background: linear-gradient(174deg, rgba(43,34,35,1) 42%, rgba(173,23,40,1) 100%);
+h1 {
+    font-family  : 'Dancing Script', cursive;
+    font-size    : 4.5rem;
+    font-style   : normal;
+    margin-top   : 12px;
+    margin-bottom: 15px;
 }
+
+h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size  : 1.5rem;
+    font-style : bold;
+    margin-top : 15px;
+}
+
+mat-card-header {
+    color: white;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/*img {*/
+/*    margin-top: 1rem;*/
+/*    border: 2px solid grey;*/
+/*    padding: 2% 10%;*/
+/*    border-radius: 2rem;*/
+/*    width: 35%;*/
+/*    text-align: center;*/
+/*    background: linear-gradient(174deg, rgba(43,34,35,1) 42%, rgba(173,23,40,1) 100%);*/
+/*}*/
 
