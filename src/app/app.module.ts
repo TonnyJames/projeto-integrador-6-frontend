@@ -64,6 +64,7 @@ import { ClinicaListComponent } from './components/clinica/clinica-list/clinica-
 //guardas de rotas
 import { AuthGuard } from './auth/auth.guard';
 import { ClinicaReadComponent } from './components/clinica/clinica-read/clinica-read.component';
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
 
 
 @NgModule({
@@ -93,12 +94,12 @@ import { ClinicaReadComponent } from './components/clinica/clinica-read/clinica-
     ClinicaListComponent,
     ClinicaReadComponent
   ],
-  imports: [
-    MatDialogModule,
-    BrowserModule,
-    CommonModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
+    imports: [
+        MatDialogModule,
+        BrowserModule,
+        CommonModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
         // Forms
         FormsModule,
         ReactiveFormsModule,
@@ -123,12 +124,13 @@ import { ClinicaReadComponent } from './components/clinica/clinica-read/clinica-
         MatDatepickerModule,
         MatNativeDateModule,
         ToastrModule.forRoot({
-          timeOut: 4000,
-          closeButton: true,
-          progressBar: true
+            timeOut: 4000,
+            closeButton: true,
+            progressBar: true
         }),
-        NgxMaskModule.forRoot()
-  ],
+        NgxMaskModule.forRoot(),
+        MatAutocompleteModule
+    ],
   providers: [AuthInterceptorProvider, AuthGuard],
   bootstrap: [AppComponent]
 })
