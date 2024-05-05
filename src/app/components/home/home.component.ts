@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, Validators} from "@angular/forms";
 import {ClinicaService} from "../../services/clinica.service";
 import {Clinica} from "../../models/clinica";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-home',
@@ -11,12 +12,11 @@ import {Clinica} from "../../models/clinica";
 export class HomeComponent implements OnInit {
 
     categoriaSelecionada: number;
-    clinicasEncontradasLista: Clinica[];
-
     CategoriaFormControl: FormControl = new FormControl(null, [Validators.required]);
 
     constructor(
         private clinicaService: ClinicaService,
+        private router: Router,
     ) {
     }
 
@@ -24,16 +24,8 @@ export class HomeComponent implements OnInit {
 
     }
 
-    public pesquisar() {
-        if (this.categoriaSelecionada) {
-            this.clinicaService.findByCategoria(this.categoriaSelecionada).subscribe(clinicasLista => {
-                this.clinicasEncontradasLista = clinicasLista
-            })
-        } else {
-            this.clinicaService.findAll().subscribe(clinicasLista => {
-                this.clinicasEncontradasLista = clinicasLista
-            })
-        }
+    public encontrarClinicas() {
+        this.router.navigate(['/clinicas'], {queryParams: {categoriaSelecionada: this.categoriaSelecionada},});
     }
 
 }

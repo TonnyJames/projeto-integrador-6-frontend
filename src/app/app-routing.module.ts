@@ -45,8 +45,8 @@ const routes: Routes = [
       { path: 'colaboradores/update/:id', component: ColaboradorUpdateComponent },
       { path: 'colaboradores/delete/:id', component: ColaboradorDeleteComponent },
 
-      { path: 'servicos', component: ClinicaListComponent },
-      { path: 'servicos/read/:id', component: ClinicaReadComponent},
+      { path: 'clinicas', component: ClinicaListComponent },
+      { path: 'clinicas/read/:id', component: ClinicaReadComponent},
       { path: 'servicos/create', component: ClinicaCreateComponent },
 
       { path: 'clientes', component: PacienteListComponent },
