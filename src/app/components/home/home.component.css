@@ -20,6 +20,10 @@
     border-color: var(--cinza-1);
 }
 
+.letra-branca {
+    color: white !important;
+}
+
 .example-form {
     min-width: 150px;
     max-width: 500px;
