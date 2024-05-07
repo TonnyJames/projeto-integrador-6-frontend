@@ -1,30 +1,64 @@
-mat-card {
+.container {
+    padding-top: 2rem;
     width: 100%;
-    background-color: black;
-    color: white;
+    height: 100%;
+    background-color: var(--verde-2);
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.container {
-    width : 80%;
-    margin: auto;
+.form {
+    margin: 1rem auto 8.5rem auto;
+    width: 50%;
+    height: fit-content;
+    background-color: var(--verde-4);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 7px;
+    border-color: var(--cinza-1);
+}
+
+.letra-verde {
+    color: var(--verde-2) !important;
 }
 
 .mat-table {
     width: 100%;
+    background-color: var(--verde-4);
 }
 
 mat-form-field {
     width: 100%;
 }
 
-button {
+.botao-voltar {
     width: 100%;
+    color: white !important;
+    background-color: var(--verde-0);
+}
+
+.botao-detalhes {
+    width: 100%;
+    color: white !important;
+    background-color: var(--verde-2);
+}
+
+mat-paginator {
+    color: var(--verde-2) !important;
+    background-color: var(--verde-4);
 }
 
 h1 {
+    color: white !important;
     width        : 100%;
     text-align   : center;
     margin-bottom: 2rem;
+}
+
+th, td {
+    color: var(--verde-2) !important;
 }
 
 .mat-column-categoria {
@@ -42,14 +76,15 @@ h1 {
 }
 
 .sign {
-    text-align    : center;
-    margin        : 0;
-    margin-top    : 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    text-align: center;
     padding-bottom: 1rem;
-    opacity       : 60%;
+    opacity: 60%;
 }
 
 .sign a {
     text-decoration: none;
-    color          : white;
+    color: white;
 }
