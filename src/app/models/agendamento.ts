@@ -3,14 +3,15 @@ export interface Agendamento{
     dataCriacao?: string;
     dataAgendada: string;
     horaAgendada: String;
+    especialidade: any;
     // prioridade?: string;
     // status?: string;
-    titulo: string;
+    // titulo: string;
     observacoes: string;
     // colaborador: any;
-    cliente: any;
-    servico: any;
-    nomeCliente: string;
+    paciente: any;
+    clinica: any;
+    nomePaciente: string;
     nomeColaborador: string;
-    nomeServico:string
+    nomeClinica:string
 }

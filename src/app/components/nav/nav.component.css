@@ -1,5 +1,7 @@
 .container {
-    background: black;
+    background     : var(--verde-2);
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -17,7 +19,7 @@ img {
 .sidenav {
     width           : 13rem;
     /* background   : linear-gradient(174deg, rgba(43,34,35,1) 42%, rgba(173,23,40,1) 100%); */
-    background-color: black;
+    background-color: var(--verde-2);
 }
 
 .nav-list {
@@ -43,9 +45,8 @@ img {
 
 
 .sidenav-content {
-    justify-content: baseline;
     text-align     : left;
-    background     : black;
+    background     : var(--verde-2);
 }
 
 .btnOpenClose {
@@ -67,7 +68,6 @@ img {
     align-items     : baseline;
     margin-right    : 2% !important;
     color           : white !important;
-    background-color: black;
     border-style    : none;
 }
 

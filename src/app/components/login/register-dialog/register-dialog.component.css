@@ -1,7 +1,35 @@
+.container {
+    background-color: var(--verde-2);
+}
+
 p, h1, h3 {
     text-align: center;
 }
 
+mat-dialog-container {
+    box-shadow: none;
+    background: var(--verde-2) !important;
+    display: block;
+     padding: 0 !important;
+}
+
 .fullwidth {
     width: 100%;
+}
+
+.button {
+    margin-top: 1rem;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: var(--verde-2);
+}
+
+.button:hover {
+    transform: translateY(-5px)
+}
+
+.letra-branca {
+    color: white !important;
 }

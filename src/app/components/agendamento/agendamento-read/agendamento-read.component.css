@@ -1,21 +1,60 @@
-.container{
-    width: 70%;
-    margin: auto auto 3rem auto;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: white;
+.container {
+    padding-top: 2rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--verde-2);
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.full-width{
+.form {
+    margin: 1rem auto 8.5rem auto;
+    width: 50%;
+    height: fit-content;
+    background-color: var(--verde-4);
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    border-style: solid;
+    border-width: 7px;
+    border-color: var(--cinza-1);
+}
+
+.letra-verde {
+    color: var(--verde-2) !important;
+}
+
+.mat-table {
+    width: 100%;
+    background-color: var(--verde-4);
+}
+
+mat-form-field {
     width: 100%;
 }
 
-h1, img, p{
-    text-align: center;
+.botao-voltar {
+    width: 100%;
+    color: white !important;
+    background-color: var(--verde-0);
 }
 
-img {
-    height: 15rem;
+.botao-detalhes {
+    width: 100%;
+    color: white !important;
+    background-color: var(--verde-2);
+}
+
+mat-paginator {
+    color: var(--verde-2) !important;
+    background-color: var(--verde-4);
+}
+
+h1 {
+    color: white !important;
+    width        : 100%;
+    text-align   : center;
+    margin-bottom: 2rem;
 }
 
 .status-prioridade {
@@ -31,15 +70,18 @@ img {
     min-height: 6rem;
     max-height: 10rem;
 }
-button {
-    margin-top: .5rem;
+
+.dataAgendada{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .sign {
-    
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
     text-align: center;
-    margin: 0;
-    margin-top: 1rem;
     padding-bottom: 1rem;
     opacity: 60%;
 }

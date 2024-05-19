@@ -14,7 +14,7 @@ export class ClinicaReadComponent implements OnInit {
   clinica: Clinica = {
 
     id: '',
-    categoria: '',
+    categorias: null,
     nmNegocio: '',
     nrInsc: '', //cpf ou cnpj
     telefone: '',

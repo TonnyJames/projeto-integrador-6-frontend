@@ -15,16 +15,17 @@ export class AgendamentoReadComponent implements OnInit {
 
     dataAgendada: '',
     horaAgendada:'',
+    especialidade:'',
     // prioridade:  '',
     // status:      '',
-    titulo:      '',
+    // titulo:      '',
     observacoes:   '',
-    cliente:     '',
+    paciente:     '',
     // colaborador:     '',
-    servico: '',
-    nomeCliente: '',
+    clinica: '',
+    nomePaciente: '',
     nomeColaborador: '',
-    nomeServico: ''
+    nomeClinica: ''
   }
 
   constructor(

@@ -13,7 +13,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class ClinicaListComponent implements OnInit {
   ELEMENT_DATA: Clinica[] = []
 
-  displayedColumns: string[] = ['nmNegocio','categoria', 'acoes'];
+  displayedColumns: string[] = ['nmNegocio','categorias', 'acoes'];
   dataSource = new MatTableDataSource<Clinica>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

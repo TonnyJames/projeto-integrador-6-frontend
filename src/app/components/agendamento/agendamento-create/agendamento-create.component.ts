@@ -20,30 +20,33 @@ import { Clinica } from 'src/app/models/clinica';
 export class AgendamentoCreateComponent implements OnInit {
   // colaboradores:  Colaborador[] = []
 
-  idServico:      String = ''
+  idClinica:      String = ''
   idCliente:      String = ''
   cliente:        Paciente
-  servico:        Clinica
+  clinica:        Clinica
   agendamento:    Agendamento = {
     dataAgendada:'',
     horaAgendada:'',
+    especialidade:'',
     // prioridade:  '',
     // status:      '',
-    titulo:      '',
+    // titulo:      '',
     observacoes:   '',
-    cliente:     '',
+    paciente:     '',
     // colaborador:     '',
-    servico: '',
-    nomeCliente: '',
+    clinica: '',
+    nomePaciente: '',
     nomeColaborador: '',
-    nomeServico: ''
+    nomeClinica: ''
   }
 
+
+  especialidade: FormControl = new FormControl(null, [Validators.required])
   horaAgendada: FormControl = new FormControl(null, [Validators.required]);
   dataAgendada: FormControl = new FormControl(null, [Validators.required])
   // prioridade: FormControl = new FormControl(null, [Validators.required])
   // status:     FormControl = new FormControl(null, [Validators.required])
-  titulo:      FormControl = new FormControl(null, [Validators.required])
+  // titulo:      FormControl = new FormControl(null, [Validators.required])
   // observacoes: FormControl = new FormControl(null, [Validators.required])
   // colaborador: FormControl = new FormControl(null, [Validators.required])
   // paciente:     FormControl = new FormControl(null, [Validators.required])
@@ -54,19 +57,19 @@ export class AgendamentoCreateComponent implements OnInit {
     private agendamentoService: AgendamentoService,
     private clienteService:     PacienteService,
     // private colaboradorService: ColaboradorService,
-    private servicoService:     ClinicaService,
+    private clinicaService:     ClinicaService,
     private toastService:       ToastrService,
     private router:             Router,
     private route:              ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.idServico = this.route.snapshot.paramMap.get('id');
+    this.idClinica = this.route.snapshot.paramMap.get('id');
     this.idCliente = localStorage.getItem("id")
     // this.findAllClientes();
     this.findClienteById();
     // this.findAllColaboradores();
-    this.findServicoById();
+    this.findClinicaById();
   }
 
   create(): void {
@@ -88,7 +91,7 @@ export class AgendamentoCreateComponent implements OnInit {
 
   findClienteById(): void {
     this.clienteService.findById(this.idCliente).subscribe(resposta => {
-      this.agendamento.cliente = resposta.id
+      this.agendamento.paciente = resposta.id
       this.cliente = resposta
     })
   }
@@ -99,10 +102,10 @@ export class AgendamentoCreateComponent implements OnInit {
   //   })
   // }
 
-  findServicoById() {
-    this.servicoService.findById(this.idServico).subscribe(resposta => {
-      this.agendamento.servico = resposta.id
-      this.servico = resposta
+  findClinicaById() {
+    this.clinicaService.findById(this.idClinica).subscribe(resposta => {
+      this.agendamento.clinica = resposta.id
+      this.clinica = resposta
     })
   }
 
@@ -111,7 +114,7 @@ export class AgendamentoCreateComponent implements OnInit {
     return this.dataAgendada.valid
     //&& this.status.valid
     && this.horaAgendada.valid
-    && this.titulo.valid
+    && this.especialidade.valid
     // && this.colaborador.valid
   }
 }

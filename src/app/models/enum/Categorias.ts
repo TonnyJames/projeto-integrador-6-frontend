@@ -1,0 +1,14 @@
+export enum Categorias {
+
+    CARDIOLOGISTA = 0,
+    CLINICO = 1,
+    DERMATOLOGISTA = 2,
+    GERIATRA = 3,
+    GINECOLOGISTA = 4,
+    OFTALMOLOGISTA = 5,
+    PEDIATRA = 6,
+    PSIQUIATRA = 7,
+    OTORRINOLARINGOLOGISTA = 8,
+    ONCOLOGISTA = 9,
+    ORTOPEDISTA = 10
+}

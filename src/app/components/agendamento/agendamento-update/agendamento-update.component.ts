@@ -18,24 +18,27 @@ import { ColaboradorService } from 'src/app/services/colaborador.service';
   styleUrls: ['./agendamento-update.component.css']
 })
 export class AgendamentoUpdateComponent implements OnInit {
+  idClinica:      String = ''
+  clinica:        Clinica
   clientes: Paciente[] = []
   colaboradores: Colaborador[] = []
   agendamento: Agendamento = {
-    titulo:      '',
+    especialidade:'',
+    // titulo:      '',
     dataAgendada: '',
     horaAgendada:'',
     // prioridade:  '',
     // status:      '',
     observacoes:   '',
-    cliente:     '',
+    paciente:     '',
     // colaborador:     '',
-    servico: '',
-    nomeCliente: '',
+    clinica: '',
+    nomePaciente: '',
     nomeColaborador: '',
-    nomeServico: ''
+    nomeClinica: ''
   }
 
-  titulo:     FormControl = new FormControl(null, [Validators.required])
+  especialidade:     FormControl = new FormControl(null, [Validators.required])
   dataAgendada: FormControl = new FormControl(null, [Validators.required])
   horaAgendada: FormControl = new FormControl(null, [Validators.required])
   // observacoes:  FormControl = new FormControl(null, [Validators.required])
@@ -48,7 +51,7 @@ export class AgendamentoUpdateComponent implements OnInit {
     private agendamentoService: AgendamentoService,
     private clienteService: PacienteService,
     private colaboradorService: ColaboradorService,
-    private servicoService: ClinicaService,
+    private clinicaService: ClinicaService,
     private toastService:   ToastrService,
     private route:          ActivatedRoute,
     private router:         Router
@@ -65,6 +68,8 @@ export class AgendamentoUpdateComponent implements OnInit {
   findAgendamentoById(): void{
     this.agendamentoService.findById(this.agendamento.id).subscribe(resposta => {
       this.agendamento = resposta;
+      this.idClinica = resposta.clinica
+      this.findClinicaById()
     }, ex => {
       this.toastService.error(ex.console.error.error);
     })
@@ -94,15 +99,21 @@ export class AgendamentoUpdateComponent implements OnInit {
   }
 
   findAllServicos() {
-    this.servicoService.findAll().subscribe(resposta => {
+    this.clinicaService.findAll().subscribe(resposta => {
       // this.clinica = resposta
+    })
+  }
+
+  findClinicaById() {
+    this.clinicaService.findById(this.idClinica).subscribe(resposta => {
+      this.clinica = resposta
     })
   }
 
   validaCampos(): boolean{
     return this.dataAgendada.valid
     && this.horaAgendada.valid
-    && this.titulo.valid
+    && this.especialidade.valid
     // && this.observacoes.valid
     // && this.paciente.valid
     // && this.clinica.valid

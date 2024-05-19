@@ -1,6 +1,8 @@
+import {Categorias} from "./enum/Categorias";
+
 export interface Clinica {
     id?: any;
-    categoria: any;
+    categorias: [Categorias];
     nmNegocio: string;
     nrInsc: string; //cpf ou cnpj
     telefone: string;
