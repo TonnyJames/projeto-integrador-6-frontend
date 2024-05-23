@@ -1,6 +1,47 @@
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+
 <div class="container">
     <mat-card-header>
         <mat-card-title><h1>Agendamento De Consultas</h1></mat-card-title>
-<!--        <mat-card-subtitle><h3>Agendamentos online</h3></mat-card-subtitle>-->
+        <!--        <mat-card-subtitle><h3>Agendamentos online</h3></mat-card-subtitle>-->
+        <mat-card-content class="menu-card-content">
+            <button  mat-icon-button class="menu-button"
+                     matTooltip="Pagina inicial">
+                <a mat-list-item [routerLink]="['home']">
+                    <i class="material-icons">home</i>
+                    Início
+                </a>
+            </button>
+            <button  mat-icon-button class="menu-button"
+                    matTooltip="Veja os estabelecimentos disponiveis no app">
+                <a mat-list-item [routerLink]="['clinicas']">
+                    <i class="material-icons">apartment</i>
+                    Clínicas
+                </a>
+            </button>
+            <button  mat-icon-button class="menu-button"
+                    matTooltip="Veja um resumo de todos os seus agendamentos">
+                <a mat-list-item [routerLink]="['agendamentos']">
+                    <i class="material-icons">calendar_month</i>
+                    Agendamentos
+                </a>
+            </button>
+            <button  mat-icon-button class="menu-button"
+                 matTooltip="Cadastre seu estabelecimento aqui para atender seus clientes">
+                <a mat-list-item [routerLink]="['/servicos/create']">
+                    <i class="material-icons"><span class="material-symbols-outlined">
+                                        monitor_heart
+                                    </span></i>
+                    Nova Clínica
+                </a>
+            </button>
+            <button  mat-icon-button class="menu-button"
+                    matTooltip="Finalizar sua sessão no app">
+                <a mat-list-item (click)=logout()>
+                    <i class="material-icons">logout</i>
+                    Sair
+                </a>
+            </button>
+        </mat-card-content>
     </mat-card-header>
 </div>

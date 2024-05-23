@@ -26,13 +26,22 @@ mat-card-header {
     text-align: center;
 }
 
-/*img {*/
-/*    margin-top: 1rem;*/
-/*    border: 2px solid grey;*/
-/*    padding: 2% 10%;*/
-/*    border-radius: 2rem;*/
-/*    width: 35%;*/
-/*    text-align: center;*/
-/*    background: linear-gradient(174deg, rgba(43,34,35,1) 42%, rgba(173,23,40,1) 100%);*/
-/*}*/
+.menu-card-content{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.menu-button{
+    margin: auto;
+}
+
+.menu-button a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-button i {
+    margin-right: .1rem;
+}
 

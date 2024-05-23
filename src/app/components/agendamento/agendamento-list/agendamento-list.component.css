@@ -8,7 +8,7 @@
     position: relative;
 }
 
-mat-card {
+form {
     margin: 1rem auto 10rem auto;
     width: 50%;
     height: fit-content;
