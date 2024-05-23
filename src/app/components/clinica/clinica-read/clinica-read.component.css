@@ -12,20 +12,12 @@
     margin: 1rem auto 8.5rem auto;
     width: 50%;
     height: fit-content;
-    background-color: var(--verde-4);
+    background-color: white;
     padding: 2rem 1rem;
     border-radius: 1rem;
     border-style: solid;
     border-width: 7px;
-    border-color: var(--cinza-1);
-}
-
-.letra-verde {
-    color: var(--verde-2) !important;
-}
-
-.letra-branca {
-    color: white !important;
+    border-color: var(--verde-4);
 }
 
 .mat-icon {
@@ -36,7 +28,13 @@
     width: 100%;
 }
 
-h1, img, p{
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
+}
+
+p{
     text-align: center;
 }
 
@@ -58,16 +56,17 @@ img {
     max-height: 10rem;
 }
 
-.botao-novo-agendamento {
+.botao-cancelar {
+    width: 100%;
+    background-color: lightgray;
+    font-size: 1.2rem;
+}
+
+.botao-salvar {
     width: 100%;
     color: white !important;
     background-color: var(--verde-2);
-    margin-bottom: 1rem;
-}
-.botao-voltar {
-    width: 100%;
-    color: white !important;
-    background-color: var(--verde-0);
+    font-size: 1.2rem;
 }
 
 .sign {

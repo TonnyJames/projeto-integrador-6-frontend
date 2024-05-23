@@ -12,30 +12,18 @@
     margin: 1rem auto 8.5rem auto;
     width: 50%;
     height: fit-content;
-    background-color: var(--verde-4);
+    background-color: white;
     padding: 2rem 1rem;
     border-radius: 1rem;
     border-style: solid;
     border-width: 7px;
-    border-color: var(--cinza-1);
-}
-
-.letra-verde {
-    color: var(--verde-2) !important;
-}
-
-.letra-branca {
-    color: white !important;
+    border-color: var(--verde-4);
 }
 
 .fullwidth {
     width: 100%;
 }
 
-img {
-    height: 12rem;
-    margin: auto;
-}
 .section {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -44,16 +32,23 @@ img {
     justify-content: space-between;
 }
 
-.botao-novo-agendamento {
+.botao-cancelar {
+    width: 100%;
+    background-color: lightgray;
+    font-size: 1.2rem;
+}
+
+.botao-salvar {
     width: 100%;
     color: white !important;
     background-color: var(--verde-2);
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
-.botao-voltar {
-    width: 100%;
-    color: white !important;
-    background-color: var(--verde-0);
+
+h1 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
 }
 
 p {

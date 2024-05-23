@@ -1,10 +1,10 @@
 <hr>
 <div class="container">
-    <form action="" class="form">
+    <form class="form">
         <h1 class="fullwidth">Cadastrar Clínica</h1>
         <!-- <img class="fullwidth" src="assets/img/faders.png" alt="image-create"> -->
-        <div class=" display-flex fullwidth">
-            <mat-form-field appearance="outline">
+        <div class="display-flex fullwidth">
+            <mat-form-field class="fullwidth" appearance="outline">
                 <mat-label>Categoria</mat-label>
                 <mat-select multiple [(ngModel)]="clinica.categorias" name="categoria" [formControl]="categoria" required>
                     <mat-option value="0">CARDIOLOGISTA</mat-option>
@@ -21,7 +21,7 @@
                 </mat-select>
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field class="fullwidth" appearance="outline">
                 <mat-label>Administrador</mat-label>
                 <input matInput [disabled]="true" [(ngModel)]="clinica.nomeAdmin" name="nomeAdmin" matInput>
             </mat-form-field>
@@ -67,10 +67,10 @@
         </p>
 
         <p>
-            <button (click)="create()" [disabled]="!validaCampos()" class="fullwidth botao-cadastrar" mat-elevation-z4 mat-flat-button>Cadastrar
+            <button (click)="create()" [disabled]="!validaCampos()" class="fullwidth botao-salvar" mat-elevation-z4 mat-flat-button>Cadastrar
             </button>
 
-            <button [routerLink]="['../']" routerLinkActive="router-link-active" class="fullwidth botao-voltar" mat-elevation-z4
+            <button [routerLink]="['../']" routerLinkActive="router-link-active" class="fullwidth botao-cancelar" mat-elevation-z4
                     mat-stroked-button>Cancelar
             </button>
         </p>
