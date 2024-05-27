@@ -12,12 +12,12 @@
     margin: 8rem auto 2rem auto;
     width           : 20%;
     height          : fit-content;
-    background-color: var(--verde-4);
+    background-color: white;
     padding         : 2rem 1rem;
     border-radius   : 1rem;
     border-style: solid;
     border-width: 7px;
-    border-color: var(--cinza-1);
+    border-color: var(--verde-4);
 }
 
 .fullwidth {
@@ -28,11 +28,8 @@ h1 {
     margin-top: 2rem;
     text-align: center;
     padding-top: 2rem;
-}
-
-img {
-    height: 12rem;
-    margin: auto;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .section {
@@ -43,8 +40,17 @@ img {
     justify-content: space-between;
 }
 
-button {
-    margin-top: .5rem;
+.botao-cancelar {
+    width: 100%;
+    background-color: lightgray;
+    font-size: 1.2rem;
+}
+
+.botao-salvar {
+    width: 100%;
+    color: white !important;
+    background-color: var(--verde-2);
+    font-size: 1.2rem;
 }
 
 p {

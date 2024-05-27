@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
     escolherTipoRegistro(): void {
       const dialogRef = this.dialog.open(RegisterDialogComponent, {
-        width: '250px',
+        width: '350px',
       });
 
       dialogRef.afterClosed().subscribe(result => {

@@ -10,5 +10,19 @@ export enum Categorias {
     PSIQUIATRA = 7,
     OTORRINOLARINGOLOGISTA = 8,
     ONCOLOGISTA = 9,
-    ORTOPEDISTA = 10
+    ORTOPEDISTA = 10,
+    DENTISTA = 11,
 }
+
+// CARDIOLOGISTA = 'cardiologista',
+//     CLINICO = 'clinico',
+//     DERMATOLOGISTA = 'dermatologista',
+//     GERIATRA = 'geriatra',
+//     GINECOLOGISTA = 'ginecologista',
+//     OFTALMOLOGISTA = 'oftalmologista',
+//     PEDIATRA = 'pediatra',
+//     PSIQUIATRA = 'psiquiatra',
+//     OTORRINOLARINGOLOGISTA = 'otorrinolaringologista',
+//     ONCOLOGISTA = 'oncologista',
+//     ORTOPEDISTA =  'ortopedia',
+//     DENTISTA = 'dentista',

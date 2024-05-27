@@ -8,37 +8,27 @@
     align-items    : center;
     justify-content: center;
     position: relative;
+    font-size: 18px;
 }
 
 .form {
     margin: 8rem auto 2rem auto;
     width           : 20%;
     height          : fit-content;
-    background-color: var(--verde-4);
+    background-color: white;
     padding         : 2rem 1rem;
     border-radius   : 1rem;
     border-style: solid;
     border-width: 7px;
-    border-color: var(--cinza-1);
+    border-color: var(--verde-4);
 }
-
 
 h1 {
-    width      : 100%;
-    text-align : center;
-    font-family: 'The Nautigal', cursive;
-    font-size  : 4rem;
-}
-
-img {
-    /* height: 25%; */
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width            : 55%;
-    /* margin-left   : auto; */
-    /* padding-bottom: 2rem; */
-    /* padding-top   : 1rem; */
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .full-width {
@@ -52,6 +42,7 @@ img {
     margin-bottom: 1rem;
     color: white;
     background-color: var(--verde-2);
+    font-size: 20px;
 }
 
 .button:hover {
@@ -98,9 +89,4 @@ mat-icon {
 
 .texto-branco {
     color: white;
-}
-
-
-.descricao-login {
-    color: var(--cinza-1);
 }

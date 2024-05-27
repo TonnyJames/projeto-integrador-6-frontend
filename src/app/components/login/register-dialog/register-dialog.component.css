@@ -1,16 +1,5 @@
-.container {
-    background-color: var(--verde-2);
-}
-
 p, h1, h3 {
     text-align: center;
-}
-
-mat-dialog-container {
-    box-shadow: none;
-    background: var(--verde-2) !important;
-    display: block;
-     padding: 0 !important;
 }
 
 .fullwidth {
@@ -28,8 +17,4 @@ mat-dialog-container {
 
 .button:hover {
     transform: translateY(-5px)
-}
-
-.letra-branca {
-    color: white !important;
 }

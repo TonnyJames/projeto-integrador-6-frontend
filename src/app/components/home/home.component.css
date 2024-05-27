@@ -9,19 +9,15 @@
 }
 
 .form {
-    margin: 8rem auto 10rem auto;
-    width: 20%;
-    height: fit-content;
-    background-color: var(--verde-4);
-    padding: 2rem 1rem;
-    border-radius: 1rem;
+    margin: 8rem auto 2rem auto;
+    width           : 20%;
+    height          : fit-content;
+    background-color: white;
+    padding         : 2rem 1rem;
+    border-radius   : 1rem;
     border-style: solid;
     border-width: 7px;
-    border-color: var(--cinza-1);
-}
-
-.letra-branca {
-    color: white !important;
+    border-color: var(--verde-4);
 }
 
 .example-form {
@@ -44,13 +40,11 @@ mat-card {
     width: max-content;
 }
 
-.button {
-    margin-top: 1rem;
-    width: 50%;
-    margin-left: 25%;
-    margin-bottom: 1rem;
-    color: white;
+.botao-salvar {
+    width: 100%;
+    color: white !important;
     background-color: var(--verde-2);
+    font-size: 1.2rem;
 }
 
 .button:hover {
@@ -81,18 +75,22 @@ mat-card-content {
     color: white;
 }
 
-h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 4.5rem;
-    font-style: normal;
-    margin-top: 12px;
-    margin-bottom: 15px;
+h4 {
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
 }
 
 h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     margin-top: 15px;
+}
+
+.descricao-univesp {
+    color: white;
+    text-align: center;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 960px) {

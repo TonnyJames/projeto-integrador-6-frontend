@@ -12,12 +12,12 @@
     margin: 1rem auto 8.5rem auto;
     width: 50%;
     height: fit-content;
-    background-color: var(--verde-4);
+    background-color: white;
     padding: 2rem 1rem;
     border-radius: 1rem;
     border-style: solid;
     border-width: 7px;
-    border-color: var(--cinza-1);
+    border-color: var(--verde-4);
 }
 
 .letra-verde {
@@ -65,21 +65,23 @@ img {
 }
 .botao-cancelar {
     width: 100%;
-    color: white !important;
-    background-color: var(--verde-0);
+    background-color: lightgray;
+    font-size: 1.2rem;
 }
 
 .botao-salvar {
     width: 100%;
     color: white !important;
     background-color: var(--verde-2);
+    font-size: 1.2rem;
 }
 
 h1 {
-    color: white !important;
-    width        : 100%;
-    text-align   : center;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 2rem;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .sign {

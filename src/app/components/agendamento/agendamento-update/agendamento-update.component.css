@@ -12,49 +12,35 @@
     margin: 1rem auto 8.5rem auto;
     width: 50%;
     height: fit-content;
-    background-color: var(--verde-4);
+    background-color: white;
     padding: 2rem 1rem;
     border-radius: 1rem;
     border-style: solid;
     border-width: 7px;
-    border-color: var(--cinza-1);
-}
-
-.letra-verde {
-    color: var(--verde-2) !important;
-}
-
-.mat-table {
-    width: 100%;
-    background-color: var(--verde-4);
+    border-color: var(--verde-4);
 }
 
 mat-form-field {
     width: 100%;
 }
 
-.botao-voltar {
+.botao-cancelar {
     width: 100%;
-    color: white !important;
-    background-color: var(--verde-0);
+    background-color: lightgray;
+    font-size: 1.2rem;
 }
 
-.botao-detalhes {
+.botao-salvar {
     width: 100%;
     color: white !important;
     background-color: var(--verde-2);
-}
-
-mat-paginator {
-    color: var(--verde-2) !important;
-    background-color: var(--verde-4);
+    font-size: 1.2rem;
 }
 
 h1 {
-    color: white !important;
-    width        : 100%;
-    text-align   : center;
-    margin-bottom: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .status-prioridade {
