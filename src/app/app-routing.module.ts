@@ -47,7 +47,7 @@ const routes: Routes = [
 
       { path: 'clinicas', component: ClinicaListComponent },
       { path: 'clinicas/read/:id', component: ClinicaReadComponent},
-      { path: 'servicos/create', component: ClinicaCreateComponent },
+      { path: 'clinicas/create', component: ClinicaCreateComponent },
 
       { path: 'clientes', component: PacienteListComponent },
       { path: 'clientes/create', component: PacienteCreateComponent },
